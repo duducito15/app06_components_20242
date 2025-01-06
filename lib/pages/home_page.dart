@@ -1,0 +1,46 @@
+import 'package:flutter/material.dart';
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 20.0,
+            ),
+            Container(
+              height: 200,
+              width: 200,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/images/david.jpg"),
+                ),
+                borderRadius: BorderRadius.circular(20.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.5),
+                    offset: Offset(5, 5),
+                    blurRadius: 12.0,
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20.0,
+            ),
+            Text(
+              "Flutter Components",
+              style: TextStyle(
+                fontSize: 22.0,
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
