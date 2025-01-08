@@ -1,3 +1,4 @@
+import 'package:app06_components_20242/pages/avatar_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -46,11 +47,7 @@ class HomePage extends StatelessWidget {
                 width: 160.0,
                 child: Divider(),
               ),
-              ItemComponentWidget(title: "Avatar"),
-              ItemComponentWidget(title: "Alerts"),
-              ItemComponentWidget(title: "Cards"),
-              ItemComponentWidget(title: "Inputs"),
-              ItemComponentWidget(title: "Lists"),
+              ItemComponentWidget(title: "Avatar", toPage: AvatarPage()),
             ],
           ),
         ),
@@ -61,8 +58,9 @@ class HomePage extends StatelessWidget {
 
 class ItemComponentWidget extends StatelessWidget {
   String title;
+  Widget toPage;
 
-  ItemComponentWidget({required this.title});
+  ItemComponentWidget({required this.title, required this.toPage});
 
   @override
   Widget build(BuildContext context) {
@@ -80,6 +78,10 @@ class ItemComponentWidget extends StatelessWidget {
         ],
       ),
       child: ListTile(
+        onTap: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => toPage));
+        },
         leading: Icon(
           Icons.check_circle_outline,
           color: Colors.black,
