@@ -29,8 +29,14 @@ class AvatarPage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Image.network(
-              "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
+          FadeInImage(
+            placeholder: AssetImage("assets/images/loading.gif"),
+            image: NetworkImage(
+                "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
+            height: 300,
+            fit: BoxFit.cover,
+            fadeInDuration: Duration(milliseconds: 1300),
+          ),
         ],
       ),
     );
