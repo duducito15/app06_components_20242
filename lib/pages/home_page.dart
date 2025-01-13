@@ -49,9 +49,9 @@ class HomePage extends StatelessWidget {
                 width: 160.0,
                 child: Divider(),
               ),
-              ItemComponentWidget(title: "Avatar", toPage: AvatarPage()),
-              ItemComponentWidget(title: "Alert", toPage: AlertPage()),
-              ItemComponentWidget(title: "Card", toPage: CardPage()),
+              ItemComponentWidget(title: "Avatar", toPage: const AvatarPage()),
+              ItemComponentWidget(title: "Alert", toPage: const AlertPage()),
+              ItemComponentWidget(title: "Card", toPage: const CardPage()),
             ],
           ),
         ),
@@ -64,7 +64,7 @@ class ItemComponentWidget extends StatelessWidget {
   String title;
   Widget toPage;
 
-  ItemComponentWidget({required this.title, required this.toPage});
+  ItemComponentWidget({super.key, required this.title, required this.toPage});
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +86,7 @@ class ItemComponentWidget extends StatelessWidget {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => toPage));
         },
-        leading: Icon(
+        leading: const Icon(
           Icons.check_circle_outline,
           color: Colors.black,
         ),

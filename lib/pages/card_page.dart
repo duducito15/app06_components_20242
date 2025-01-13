@@ -7,7 +7,7 @@ class CardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Card Page"),
+        title: const Text("Card Page"),
       ),
     );
   }
