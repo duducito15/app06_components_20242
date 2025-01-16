@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
                 child: Divider(),
               ),
               ItemComponentWidget(title: "Avatar", toPage: const AvatarPage()),
-              ItemComponentWidget(title: "Alert", toPage: AlertPage()),
+              ItemComponentWidget(title: "Alert", toPage: const AlertPage()),
               ItemComponentWidget(title: "Card", toPage: const CardPage()),
             ],
           ),
