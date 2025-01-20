@@ -84,7 +84,25 @@ class InputPage extends StatelessWidget {
                   ),
                   fillColor: Colors.white,
                   filled: true,
+                  suffixIcon: Container(
+                    margin: EdgeInsets.all(2.0),
+                    decoration: BoxDecoration(
+                      color: Colors.pinkAccent,
+                      borderRadius: BorderRadius.circular(12.0),
+                    ),
+                    child: Icon(
+                      Icons.search,
+                      color: Colors.white,
+                    ),
+                  ),
                   enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(14.0),
+                    borderSide: BorderSide(
+                      color: Colors.grey,
+                      width: 0.0,
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(14.0),
                     borderSide: BorderSide(
                       color: Colors.grey,
