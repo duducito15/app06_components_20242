@@ -92,10 +92,10 @@ class CardPage extends StatelessWidget {
                   'assets/images/image1.png',
                   height: 120.0,
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 5.0,
                 ),
-                Expanded(
+                const Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -119,6 +119,59 @@ class CardPage extends StatelessWidget {
                         ),
                       ),
                     ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          //Card 3
+          Container(
+            margin:
+                const EdgeInsets.symmetric(horizontal: 16.0, vertical: 14.0),
+            // padding: const EdgeInsets.all(12.0),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(18.0),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.2),
+                  offset: const Offset(4, 4),
+                  blurRadius: 12.0,
+                ),
+              ],
+            ),
+            child: Row(
+              children: [
+                const Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Text(
+                      "Eu pariatur amet est dolore nulla eu pariatur anim. Nostrud ex minim qui quis est. Ad aliquip cupidatat veniam dolor cupidatat proident nostrud officia nostrud ex esse laborum. Veniam eu mollit ipsum proident reprehenderit anim Lorem minim. Commodo occaecat duis eu proident proident est in dolor quis exercitation excepteur consequat irure. Ea culpa sit aute pariatur et duis exercitation dolor proident.",
+                      maxLines: 6,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                ),
+                // ClipRRect(
+                //   borderRadius: BorderRadius.circular(16.0),
+                //   child: Image.network(
+                //     "https://images.pexels.com/photos/30232872/pexels-photo-30232872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                //     height: 130.0,
+                //     width: 130.0,
+                //     fit: BoxFit.cover,
+                //   ),
+                // ),
+                Container(
+                  width: 130.0,
+                  height: 130.0,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16.0),
+                    image: const DecorationImage(
+                      fit: BoxFit.cover,
+                      image: NetworkImage(
+                          "https://images.pexels.com/photos/30232872/pexels-photo-30232872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
+                    ),
                   ),
                 ),
               ],
